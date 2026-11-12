@@ -149,6 +149,8 @@ export function App() {
 
       <div className="relative z-10 mx-auto max-w-md">
         <TopNavPill
+          herName={payload.herName}
+          senderName={payload.senderName}
           currentStage={currentStage}
           unlockedMaxStage={unlockedMaxStage}
           musicOn={musicOn}
@@ -164,6 +166,7 @@ export function App() {
                 key="envelope"
                 envelope={payload.envelope}
                 herName={payload.herName}
+                senderName={payload.senderName}
                 palette={palette}
                 onOpen={handleEnvelopeOpen}
               />
@@ -183,6 +186,8 @@ export function App() {
               <LoveNotesStage
                 key="notes"
                 notes={payload.notes}
+                herName={payload.herName}
+                senderName={payload.senderName}
                 palette={palette}
                 onNext={() => goToStage('memories')}
               />

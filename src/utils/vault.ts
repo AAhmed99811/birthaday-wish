@@ -31,7 +31,7 @@ async function fetchAndDecrypt(relativeVaultPath: string, key: CryptoKey): Promi
   const base = import.meta.env.BASE_URL || './';
   const normalizedBase = base.endsWith('/') ? base : `${base}/`;
   const response = await fetch(`${normalizedBase}vault/${relativeVaultPath}`, {
-    cache: relativeVaultPath === 'meta.enc' ? 'no-cache' : 'default',
+    cache: relativeVaultPath === 'meta.enc' ? 'no-store' : 'default',
   });
   if (!response.ok) {
     throw new Error(`Failed to fetch vault asset: ${relativeVaultPath}`);

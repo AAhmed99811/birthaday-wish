@@ -10,11 +10,18 @@ import { sound } from '../utils/sound';
 interface EnvelopeStageProps {
   envelope: BirthdayPayload['envelope'];
   herName: string;
+  senderName: string;
   palette: ThemePalette;
   onOpen: () => void;
 }
 
-export function EnvelopeStage({ envelope, herName, palette, onOpen }: EnvelopeStageProps) {
+export function EnvelopeStage({
+  envelope,
+  herName,
+  senderName,
+  palette,
+  onOpen,
+}: EnvelopeStageProps) {
   const [opening, setOpening] = useState(false);
 
   const handleOpen = () => {
@@ -100,8 +107,11 @@ export function EnvelopeStage({ envelope, herName, palette, onOpen }: EnvelopeSt
             {envelope.title}
           </h1>
 
-          <p className="mt-1.5 font-hand text-xl text-rose-500">
-            For {herName} 💖
+          <p className="mt-2 font-hand text-2xl text-rose-500">
+            For My Forever, {herName} 💖
+          </p>
+          <p className="text-xs font-bold uppercase tracking-widest text-rose-400">
+            With all of {senderName}&apos;s heart
           </p>
 
           <p className={`mt-3 text-sm leading-relaxed ${palette.subText}`}>

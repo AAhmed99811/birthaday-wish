@@ -1,4 +1,4 @@
-import { Volume2, VolumeX } from 'lucide-react';
+import { Heart, Volume2, VolumeX } from 'lucide-react';
 import type { StageId } from '../types/birthday';
 import type { ThemePalette } from '../utils/themes';
 
@@ -11,6 +11,8 @@ const STAGES: Array<{ id: StageId; label: string; emoji: string }> = [
 ];
 
 interface TopNavPillProps {
+  herName: string;
+  senderName: string;
   currentStage: StageId;
   unlockedMaxStage: number;
   musicOn: boolean;
@@ -20,6 +22,8 @@ interface TopNavPillProps {
 }
 
 export function TopNavPill({
+  herName,
+  senderName,
   currentStage,
   unlockedMaxStage,
   musicOn,
@@ -66,6 +70,15 @@ export function TopNavPill({
         >
           {musicOn ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
         </button>
+      </div>
+
+      <div className="mt-1.5 flex justify-center">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/75 backdrop-blur-xs border border-pink-200/70 px-3 py-0.5 text-[11px] font-extrabold tracking-wide text-rose-600 shadow-2xs">
+          <span>{senderName}</span>
+          <Heart className="h-3 w-3 fill-rose-500 text-rose-500 animate-pulse" />
+          <span>{herName}</span>
+          <span aria-hidden="true">• Forever</span>
+        </span>
       </div>
     </header>
   );

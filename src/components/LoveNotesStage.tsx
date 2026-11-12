@@ -8,6 +8,8 @@ import { sound } from '../utils/sound';
 
 interface LoveNotesStageProps {
   notes: LoveNote[];
+  herName: string;
+  senderName: string;
   palette: ThemePalette;
   onNext: () => void;
 }
@@ -18,7 +20,13 @@ interface BurstItem {
   offsetX: number;
 }
 
-export function LoveNotesStage({ notes, palette, onNext }: LoveNotesStageProps) {
+export function LoveNotesStage({
+  notes,
+  herName,
+  senderName,
+  palette,
+  onNext,
+}: LoveNotesStageProps) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const [loveCount, setLoveCount] = useState(0);
@@ -55,6 +63,10 @@ export function LoveNotesStage({ notes, palette, onNext }: LoveNotesStageProps) 
       className="flex flex-col items-center justify-center px-5 pb-10 pt-2 min-h-[calc(100dvh-5rem)]"
     >
       <div className="relative w-full max-w-sm">
+        <p className="mb-2.5 text-center font-hand text-lg text-rose-500">
+          {senderName}&apos;s Promises for {herName} 💍
+        </p>
+
         {/* Floating kiss/hug sticker bursts */}
         <div className="pointer-events-none fixed inset-x-0 bottom-28 z-40 flex justify-center">
           <AnimatePresence>
