@@ -1,0 +1,17 @@
+# Dependencies & build output
+node_modules/
+dist/
+.vite/
+
+# Keep raw personal photos local so unencrypted images are not exposed in public git history
+her-photos/*
+!her-photos/README.md
+
+# Secret decryption key & generated QR artifacts (never commit secrets!)
+.env.secret
+qr-output/
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+*.log
