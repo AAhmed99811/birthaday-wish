@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Nunito', system-ui, -apple-system, sans-serif;
+    --font-script: 'Pacifico', cursive;
+    --font-hand: 'Patrick Hand', cursive;
+  }
+
+  html,
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-sans);
+    overscroll-behavior-y: contain;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+.bg-stationery {
+  background-color: #fffafd;
+  background-image:
+    radial-gradient(#f9a8d438 1.2px, transparent 1.2px),
+    linear-gradient(to bottom, transparent 27px, #fce7f380 28px);
+  background-size: 24px 24px, 100% 28px;
+}
+
+.bg-polka-soft {
+  background-image: radial-gradient(rgba(244, 114, 182, 0.16) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.08, 1.15) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+.animate-flicker {
+  animation: flicker 0.55s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 3.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flicker,
+  .animate-float-slow {
+    animation: none;
+  }
+}
+

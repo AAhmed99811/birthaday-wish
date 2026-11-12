@@ -3,9 +3,13 @@ node_modules/
 dist/
 .vite/
 
-# Keep raw personal photos local so unencrypted images are not exposed in public git history
+# Keep raw personal photos & private text local (only AES-256-GCM encrypted vault is committed/deployed)
 her-photos/*
 !her-photos/README.md
+content/birthday.config.json
+
+# Synced runtime copy of stickers/ (synced automatically during dev/build)
+public/stickers/
 
 # Secret decryption key & generated QR artifacts (never commit secrets!)
 .env.secret
@@ -15,4 +19,3 @@ qr-output/
 .DS_Store
 Thumbs.db
 *.log
-

@@ -1,0 +1,94 @@
+{
+  "herName": "My Love",
+  "senderName": "Yours Always",
+  "theme": "blush",
+  "optionalPin": "",
+  "envelope": {
+    "badge": "Special Birthday Delivery",
+    "title": "A Little Birthday Magic",
+    "subtitle": "Made just for you — tap the heart seal to open your surprise",
+    "buttonText": "Open My Surprise",
+    "sticker": "peach-cat-birthday.webp"
+  },
+  "cake": {
+    "title": "Make a Birthday Wish!",
+    "subtitle": "Close your eyes, wish for something wonderful, and tap the candles to blow them out",
+    "wishPrompt": "Blow Out the Candles",
+    "blownTitle": "Happy Birthday, My Love!",
+    "blownSubtitle": "May every single wish in your heart come true today and always.",
+    "sticker": "bubu-dudu-happy-bday.webp",
+    "blownSticker": "kawaii-cake-party.webp"
+  },
+  "notes": [
+    {
+      "id": "note-1",
+      "tag": "Reason #1",
+      "title": "Your Smile Lights Up Everything",
+      "body": "Even on the busiest or hardest days, one look at your smile turns everything soft, warm, and happy again.",
+      "sticker": "milk-mocha-heart-bear.webp"
+    },
+    {
+      "id": "note-2",
+      "tag": "My Favorite Feeling",
+      "title": "Being Close to You",
+      "body": "Every laugh, every late-night talk, and every quiet moment with you feels like my favorite place in the whole world.",
+      "sticker": "peach-goma-love.webp"
+    },
+    {
+      "id": "note-3",
+      "tag": "Little Secret",
+      "title": "I Fall For You Every Day",
+      "body": "The cute way you get excited, the kindness in your heart, and the way you make ordinary days feel magical — I adore all of you.",
+      "sticker": "bubu-love.webp"
+    },
+    {
+      "id": "note-4",
+      "tag": "Just For You",
+      "title": "Unlimited Hugs & Kisses Today",
+      "body": "Consider this card your lifetime pass for extra forehead kisses, tight warm hugs, and all your favorite treats!",
+      "sticker": "bubu-dudu-kiss.webp"
+    },
+    {
+      "id": "note-5",
+      "tag": "Always",
+      "title": "You Deserve the Sweetest Year Ahead",
+      "body": "I am so proud of you and so grateful to celebrate another year of your beautiful life by your side.",
+      "sticker": "peach-goma-cuddle.webp"
+    }
+  ],
+  "memories": {
+    "title": "My Favorite View",
+    "subtitle": "Swipe through your cutest moments — tap any Polaroid to zoom in",
+    "photoCaptions": {},
+    "defaultCaptions": [
+      "Always glowing ✨",
+      "My favorite smile in the world 💕",
+      "How are you this cute?! 🥰",
+      "A whole blessing in human form 🌸",
+      "Pure sunshine ☀️💖",
+      "Look at that pretty face 🎀",
+      "Forever my favorite person 💌",
+      "Unfairly adorable 🐻💗",
+      "Main character energy ✨",
+      "Heart-stealer alert 💘",
+      "Sweetest soul ever 🌷",
+      "Can't stop smiling at this one 😊"
+    ]
+  },
+  "letter": {
+    "heading": "To the Girl Who Holds My Heart,",
+    "paragraphs": [
+      "Happy Birthday! Today isn't just another date on the calendar — it's the day the sweetest, kindest, most radiant person came into this world.",
+      "Thank you for every laugh we've shared, every picture I get to keep like treasure, and every little moment where simply talking to you makes my whole day brighter.",
+      "I hope this year wraps you in gentle mornings, endless smiles, soft joy, and all the love you give so effortlessly to everyone around you. No matter where life takes us, I'll always be cheering the loudest for you."
+    ],
+    "closing": "Happy Birthday once again, cutie. I love you more than words can fit on a screen.",
+    "signature": "Forever yours ❤️",
+    "stickers": [
+      "emoji-bouquet.webp",
+      "peach-goma-kiss.webp",
+      "bubu-dudu-back-hug.webp"
+    ]
+  }
+}
+
