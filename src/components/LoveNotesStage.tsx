@@ -84,6 +84,7 @@ export function LoveNotesStage({ notes, palette, onNext }: LoveNotesStageProps) 
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.25}
+            style={{ touchAction: 'pan-y' }}
             onDragEnd={(_, info) => {
               if (info.offset.x < -55) paginate(1);
               else if (info.offset.x > 55) paginate(-1);

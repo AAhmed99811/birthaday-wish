@@ -149,6 +149,7 @@ export function MemoriesStage({
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
                   dragElastic={0.45}
+                  style={{ touchAction: 'pan-y' }}
                   onDragEnd={(_, info) => {
                     if (info.offset.x < -75) step(1);
                     else if (info.offset.x > 75) step(-1);
@@ -241,7 +242,7 @@ export function MemoriesStage({
 
         {/* Scrapbook Grid View */}
         {viewMode === 'grid' && (
-          <div className="mt-5 grid grid-cols-2 gap-3.5 pb-4">
+          <div className="mt-5 grid grid-cols-2 gap-3.5 pb-20">
             {items.map((item, idx) => (
               <motion.button
                 key={item.id}
@@ -292,18 +293,20 @@ export function MemoriesStage({
         )}
 
         {/* Continue to Birthday Letter */}
-        <motion.button
-          type="button"
-          whileTap={{ scale: 0.96 }}
-          onClick={() => {
-            sound.playPop();
-            onNext();
-          }}
-          className={`mt-6 w-full rounded-2xl bg-gradient-to-r ${palette.buttonGradient} py-3.5 px-6 text-base font-extrabold text-white shadow-lg shadow-pink-400/35 flex items-center justify-center gap-2 cursor-pointer`}
-        >
-          <MailOpen className="h-5 w-5" />
-          <span>Read Your Birthday Letter 💌</span>
-        </motion.button>
+        <div className={viewMode === 'grid' ? 'sticky bottom-4 z-20 pt-2' : 'mt-6'}>
+          <motion.button
+            type="button"
+            whileTap={{ scale: 0.96 }}
+            onClick={() => {
+              sound.playPop();
+              onNext();
+            }}
+            className={`w-full rounded-2xl bg-gradient-to-r ${palette.buttonGradient} py-3.5 px-6 text-base font-extrabold text-white shadow-lg shadow-pink-400/35 flex items-center justify-center gap-2 cursor-pointer`}
+          >
+            <MailOpen className="h-5 w-5" />
+            <span>Read Your Birthday Letter 💌</span>
+          </motion.button>
+        </div>
       </div>
 
       {/* Fullscreen Lightbox */}

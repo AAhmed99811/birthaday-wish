@@ -143,7 +143,7 @@ export function App() {
 
   return (
     <div
-      className={`relative min-h-[100dvh] w-full bg-gradient-to-b ${palette.bgGradient} bg-polka-soft pb-[env(safe-area-inset-bottom)]`}
+      className={`relative min-h-[100dvh] w-full overflow-x-clip bg-gradient-to-b ${palette.bgGradient} bg-polka-soft pb-[env(safe-area-inset-bottom)]`}
     >
       <FloatingDecor />
 
